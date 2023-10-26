@@ -1,0 +1,22 @@
+ALGORITHM Insertion_sort
+VAR
+    arr: ARRAY_OF CHAR[10];
+    j,temp,i: INTEGER
+BEGIN
+    i:=0
+    j:=i+1
+    Write("insert characters (max 10 ch)");
+    Read(arr);
+    FOR i FROM 0 TO arr.length DO
+        Read(arr[i])
+    END_FOR
+    FOR i FROM 0 TO arr.length-1 STEP 1  DO
+    FOR j=i+1 FROM j>0 TO arr.length-1 STEP 1  DO
+    IF (arr[j]<arr[j-1]) THEN
+        temp:=arr[j]
+        arr[j]:=arr[j-1]
+        arr[j-1]:=temp
+    END_IF
+    END_FOR
+    END_FOR
+END
